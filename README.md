@@ -6,4 +6,4 @@ M B: Z490 Vision D
 
 GPU: 5700xt
 
-opencore version: 0.6.6 (Updating)
+Opencore version: 0.6.7 (Updating)

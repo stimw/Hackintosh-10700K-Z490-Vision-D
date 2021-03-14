@@ -246,8 +246,6 @@
 				<string>ATY,Adder</string>
 				<key>@3,name</key>
 				<string>ATY,Adder</string>
-				<key>device_type</key>
-				<string>ATY,AdderParent</string>
 				<key>AAPL00,DualLink</key>
 				<data>AQAAAA==</data>
 				<key>ATY,Card#</key>
@@ -324,6 +322,8 @@
 				<integer>0</integer>
 				<key>PP_FuzzyFanControl</key>
 				<integer>1</integer>
+				<key>device_type</key>
+				<string>ATY,AdderParent</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
@@ -348,10 +348,10 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con0-busid</key>
@@ -396,10 +396,10 @@
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>model</key>
-				<string>Intel UHD Graphics 630</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel UHD Graphics 630</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
@@ -413,12 +413,12 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
-				<key>layout-id</key>
-				<data>CwAAAA==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,31,3</string>
 				<key>device_type</key>
 				<string>Audio device</string>
+				<key>layout-id</key>
+				<data>CwAAAA==</data>
 				<key>model</key>
 				<string>Realtek 1220-VB</string>
 			</dict>
@@ -855,14 +855,6 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
-			<key>ForceSecureBootScheme</key>
-			<false/>
-			<key>ExtendBTFeatureFlags</key>
-			<false/>
-			<key>LegacyCommpage</key>
-			<false/>
-			<key>DisableLinkeditJettison</key>
-			<true/>
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
 			<key>AppleXcpmCfgLock</key>
@@ -875,13 +867,21 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>DisableRtcChecksum</key>
 			<false/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
+			<false/>
+			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
 			<true/>
@@ -916,10 +916,10 @@
 			<string>None</string>
 			<key>HideAuxiliary</key>
 			<false/>
-			<key>LauncherPath</key>
-			<string>Default</string>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
+			<key>LauncherPath</key>
+			<string>Default</string>
 			<key>PickerAttributes</key>
 			<integer>17</integer>
 			<key>PickerAudioAssist</key>
@@ -939,8 +939,6 @@
 		</dict>
 		<key>Debug</key>
 		<dict>
-			<key>SerialInit</key>
-			<false/>
 			<key>AppleDebug</key>
 			<true/>
 			<key>ApplePanic</key>
@@ -951,6 +949,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
+			<key>SerialInit</key>
+			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
@@ -977,22 +977,20 @@
 		</array>
 		<key>Security</key>
 		<dict>
-			<key>EnablePassword</key>
-			<false/>
-			<key>SecureBootModel</key>
-			<string>Disabled</string>
-			<key>DmgLoading</key>
-			<string>Signed</string>
-			<key>ApECID</key>
-			<integer>0</integer>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AuthRestart</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
 			<true/>
+			<key>DmgLoading</key>
+			<string>Signed</string>
+			<key>EnablePassword</key>
+			<false/>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
@@ -1003,6 +1001,8 @@
 			<data></data>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>SecureBootModel</key>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -1169,8 +1169,6 @@
 		<false/>
 		<key>Generic</key>
 		<dict>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MaxBIOSVersion</key>
@@ -1183,6 +1181,8 @@
 			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
@@ -1231,7 +1231,9 @@
 			<key>MinimumVolume</key>
 			<integer>20</integer>
 			<key>PlayChime</key>
-			<string>disabled</string>
+			<string>Auto</string>
+			<key>ResetTrafficClass</key>
+			<false/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
@@ -1252,8 +1254,6 @@
 			<false/>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>
@@ -1269,13 +1269,15 @@
 		</dict>
 		<key>Output</key>
 		<dict>
-			<key>ForceResolution</key>
-			<false/>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
+			<false/>
+			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1335,6 +1337,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>ActivateHpetSupport</key>
+			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
@@ -1355,26 +1359,26 @@
 			<dict>
 				<key>Address</key>
 				<integer>268435456</integer>
-				<key>Type</key>
-				<string>RuntimeCode</string>
 				<key>Comment</key>
 				<string>HD3000: IGPU memory corruption errata</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Size</key>
 				<integer>268435456</integer>
+				<key>Type</key>
+				<string>RuntimeCode</string>
 			</dict>
 			<dict>
 				<key>Address</key>
 				<integer>569344</integer>
-				<key>Type</key>
-				<string>RuntimeCode</string>
 				<key>Comment</key>
 				<string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Size</key>
 				<integer>4096</integer>
+				<key>Type</key>
+				<string>RuntimeCode</string>
 			</dict>
 		</array>
 	</dict>
