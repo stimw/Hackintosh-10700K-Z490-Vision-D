@@ -1,3 +1,5 @@
+> This repo is under no maintenance
+
 # Hackintosh-10700K-Z490-Vision-D
 
 CPU: 10700k
